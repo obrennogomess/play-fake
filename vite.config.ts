@@ -14,7 +14,7 @@ export default defineConfig(() => {
         configureServer(server) {
           server.middlewares.use((req, res, next) => {
             if (req.url && (req.url === '/Cineva.apk' || req.url.startsWith('/Cineva.apk?') || req.url === '/meuspp/02bbb3f704ddbfae/download')) {
-              const apkPath = path.resolve(__dirname, 'public/Cineva.apk');
+              const apkPath = path.resolve(process.cwd(), 'public/Cineva.apk');
               if (fs.existsSync(apkPath)) {
                 res.writeHead(200, {
                   'Content-Type': 'application/vnd.android.package-archive',
@@ -32,7 +32,7 @@ export default defineConfig(() => {
     ],
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, '.'),
+        '@': path.resolve(process.cwd(), '.'),
       },
     },
     server: {
