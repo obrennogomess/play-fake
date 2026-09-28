@@ -1,0 +1,196 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="nHeroGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#181818" stop-opacity="0.2"/>
+      <stop offset="65%" stop-color="#141414" stop-opacity="0.65"/>
+      <stop offset="100%" stop-color="#141414" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="billboardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#221f1f"/>
+      <stop offset="40%" stop-color="#181818"/>
+      <stop offset="100%" stop-color="#0b0b0b"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E50914"/>
+      <stop offset="100%" stop-color="#B81D24"/>
+    </linearGradient>
+    <linearGradient id="goldBadge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Deep Netflix charcoal background -->
+  <rect width="1280" height="720" fill="#141414"/>
+
+  <!-- Hero Billboard Background Representation -->
+  <rect width="1280" height="460" fill="url(#billboardBg)"/>
+  <!-- Cinematic glowing shapes -->
+  <circle cx="920" cy="180" r="260" fill="#E50914" opacity="0.18" filter="blur(60px)"/>
+  <circle cx="1100" cy="220" r="200" fill="#38bdf8" opacity="0.12" filter="blur(50px)"/>
+
+  <!-- Gradient overlay fading to bottom #141414 -->
+  <rect width="1280" height="460" fill="url(#nHeroGrad)"/>
+
+  <!-- Netflix style Header Bar -->
+  <rect width="1280" height="68" fill="rgba(20,20,20,0.85)"/>
+  <g transform="translate(48, 14)">
+    <!-- Cineva Logo Image + Text -->
+    <rect x="0" y="0" width="40" height="40" rx="8" fill="#0c1427"/>
+    <image href="/images/logo.png" x="0" y="0" width="40" height="40" preserveAspectRatio="xMidYMid meet"/>
+    
+    <text x="52" y="28" font-family="'Impact', 'Bebas Neue', 'Helvetica Neue', sans-serif" font-size="28" font-weight="bold" fill="#E50914" letter-spacing="2">CINEVA</text>
+    <text x="165" y="27" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff" opacity="0.7">STREAMING</text>
+    
+    <!-- Navigation Links -->
+    <text x="280" y="26" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Início</text>
+    <text x="345" y="26" font-family="sans-serif" font-size="14" fill="#e5e5e5">Séries</text>
+    <text x="410" y="26" font-family="sans-serif" font-size="14" fill="#e5e5e5">Filmes</text>
+    <text x="475" y="26" font-family="sans-serif" font-size="14" fill="#e5e5e5">Bombando</text>
+    <text x="565" y="26" font-family="sans-serif" font-size="14" fill="#e5e5e5">Minha lista</text>
+    <rect x="665" y="6" width="135" height="28" rx="14" fill="#E50914"/>
+    <text x="732" y="24" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">● CANAIS AO VIVO</text>
+  </g>
+
+  <!-- Right Header Icons -->
+  <g transform="translate(1120, 20)">
+    <circle cx="15" cy="14" r="6" fill="none" stroke="#ffffff" stroke-width="2"/>
+    <line x1="20" y1="19" x2="26" y2="25" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+    <!-- Bell -->
+    <path d="M55 8 C55 4, 65 4, 65 8 L67 18 L53 18 Z M58 21 A2 2 0 0 0 62 21" fill="none" stroke="#ffffff" stroke-width="2"/>
+    <!-- Profile Avatar (Netflix Blue/Smiley icon style) -->
+    <rect x="85" y="0" width="30" height="30" rx="4" fill="#E50914"/>
+    <circle cx="95" cy="10" r="3" fill="#ffffff"/>
+    <circle cx="105" cy="10" r="3" fill="#ffffff"/>
+    <path d="M94 18 Q100 23 106 18" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Hero Billboard Content (Stranger Things / House of the Dragon style) -->
+  <g transform="translate(48, 120)">
+    <!-- Series / Film Badge -->
+    <g transform="translate(0, 0)">
+      <rect width="150" height="22" rx="3" fill="rgba(0,0,0,0.6)"/>
+      <text x="8" y="15" font-family="sans-serif" font-size="11" font-weight="bold" fill="#E50914">CINEVA ORIGINAL</text>
+      <text x="108" y="15" font-family="sans-serif" font-size="11" font-weight="500" fill="#ffffff">• SÉRIE</text>
+    </g>
+
+    <!-- Title -->
+    <text x="0" y="72" font-family="'Impact', 'Helvetica Neue', sans-serif" font-size="56" font-weight="900" fill="#ffffff" letter-spacing="1">STRANGER THINGS</text>
+    
+    <!-- Top 10 Badge -->
+    <g transform="translate(0, 95)">
+      <rect width="28" height="28" rx="3" fill="#E50914"/>
+      <text x="14" y="20" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">TOP</text>
+      <rect x="34" y="0" width="28" height="28" rx="3" fill="#ffffff"/>
+      <text x="48" y="20" font-family="sans-serif" font-size="15" font-weight="900" fill="#141414" text-anchor="middle">1</text>
+      <text x="72" y="19" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff">Top 1 em Séries no Cineva Hoje</text>
+    </g>
+
+    <!-- Meta specs -->
+    <g transform="translate(0, 140)">
+      <text x="0" y="14" font-family="sans-serif" font-size="14" font-weight="bold" fill="#46d369">98% relevante</text>
+      <text x="105" y="14" font-family="sans-serif" font-size="14" fill="#a3a3a3">2026</text>
+      <rect x="150" y="1" width="32" height="18" rx="2" fill="#333333" stroke="#666666" stroke-width="1"/>
+      <text x="166" y="14" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">16+</text>
+      <text x="192" y="14" font-family="sans-serif" font-size="14" fill="#a3a3a3">5 Temporadas</text>
+      <rect x="295" y="1" width="75" height="18" rx="2" fill="transparent" stroke="#a3a3a3" stroke-width="1"/>
+      <text x="332" y="14" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">4K ULTRA HD</text>
+      <rect x="378" y="1" width="65" height="18" rx="2" fill="transparent" stroke="#a3a3a3" stroke-width="1"/>
+      <text x="410" y="14" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">5.1 ÁUDIO</text>
+    </g>
+
+    <!-- Synopsis -->
+    <text x="0" y="182" font-family="sans-serif" font-size="15" fill="#e5e5e5" width="550">Quando forças desconhecidas ameaçam Hawkins, o grupo se reúne para a batalha final.</text>
+    <text x="0" y="204" font-family="sans-serif" font-size="15" fill="#e5e5e5">Transmissão exclusiva no Cineva com resolução 4K HDR e som espacial multicanal.</text>
+
+    <!-- Buttons -->
+    <g transform="translate(0, 230)">
+      <!-- Assistir button -->
+      <rect width="135" height="44" rx="6" fill="#ffffff"/>
+      <polygon points="26,16 26,28 36,22" fill="#141414"/>
+      <text x="48" y="28" font-family="sans-serif" font-size="16" font-weight="bold" fill="#141414">Assistir</text>
+      
+      <!-- Mais Informações button -->
+      <g transform="translate(150, 0)">
+        <rect width="180" height="44" rx="6" fill="rgba(109, 109, 110, 0.7)"/>
+        <circle cx="26" cy="22" r="9" fill="none" stroke="#ffffff" stroke-width="2"/>
+        <text x="26" y="26" font-family="sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">i</text>
+        <text x="46" y="28" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff">Mais informações</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Sound & Age badge right side -->
+  <g transform="translate(1190, 350)">
+    <rect x="-40" y="0" width="80" height="32" fill="rgba(51,51,51,0.6)" rx="2"/>
+    <rect x="-3" y="6" width="3" height="20" fill="#E50914"/>
+    <text x="-20" y="21" font-family="sans-serif" font-size="13" font-weight="bold" fill="#ffffff">16+</text>
+  </g>
+
+  <!-- Netflix Catalog Carousel Row 1: Continuar assistindo -->
+  <g transform="translate(48, 435)">
+    <text x="0" y="0" font-family="sans-serif" font-size="19" font-weight="bold" fill="#e5e5e5">Continuar assistindo no Cineva</text>
+
+    <!-- Row of 5 posters -->
+    <!-- Card 1 -->
+    <g transform="translate(0, 16)">
+      <rect width="224" height="126" rx="5" fill="#222" stroke="#333" stroke-width="1"/>
+      <rect width="224" height="126" rx="5" fill="#1e293b"/>
+      <!-- Film art simulation -->
+      <rect x="10" y="10" width="40" height="18" rx="3" fill="#E50914"/>
+      <text x="30" y="23" font-family="sans-serif" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">4K</text>
+      <text x="112" y="65" font-family="sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">ROUND 6 • T2</text>
+      <text x="112" y="85" font-family="sans-serif" font-size="11" fill="#46d369" text-anchor="middle">Episódio 4 • 97% Relevante</text>
+      <!-- Netflix red progress bar -->
+      <rect x="0" y="122" width="224" height="4" fill="#404040" rx="2"/>
+      <rect x="0" y="122" width="150" height="4" fill="#E50914" rx="2"/>
+    </g>
+
+    <!-- Card 2 (Champions League Live) -->
+    <g transform="translate(240, 16)">
+      <rect width="224" height="126" rx="5" fill="#064e3b" stroke="#333" stroke-width="1"/>
+      <rect x="10" y="10" width="55" height="18" rx="3" fill="#E50914"/>
+      <text x="37" y="23" font-family="sans-serif" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">AO VIVO</text>
+      <text x="112" y="60" font-family="sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">CHAMPIONS LEAGUE</text>
+      <text x="112" y="80" font-family="sans-serif" font-size="12" font-weight="bold" fill="#38bdf8" text-anchor="middle">Real Madrid x Bayern 4K</text>
+      <rect x="0" y="122" width="224" height="4" fill="#404040" rx="2"/>
+      <rect x="0" y="122" width="195" height="4" fill="#E50914" rx="2"/>
+    </g>
+
+    <!-- Card 3 -->
+    <g transform="translate(480, 16)">
+      <rect width="224" height="126" rx="5" fill="#312e81" stroke="#333" stroke-width="1"/>
+      <rect x="10" y="10" width="40" height="18" rx="3" fill="#01875f"/>
+      <text x="30" y="23" font-family="sans-serif" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">IMAX</text>
+      <text x="112" y="65" font-family="sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">DUNA: PARTE 2</text>
+      <text x="112" y="85" font-family="sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Faltam 42 min • 4K HDR</text>
+      <rect x="0" y="122" width="224" height="4" fill="#404040" rx="2"/>
+      <rect x="0" y="122" width="95" height="4" fill="#E50914" rx="2"/>
+    </g>
+
+    <!-- Card 4 -->
+    <g transform="translate(720, 16)">
+      <rect width="224" height="126" rx="5" fill="#701a75" stroke="#333" stroke-width="1"/>
+      <rect x="10" y="10" width="40" height="18" rx="3" fill="#E50914"/>
+      <text x="30" y="23" font-family="sans-serif" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">NOVO</text>
+      <text x="112" y="65" font-family="sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">THE BOYS • T4</text>
+      <text x="112" y="85" font-family="sans-serif" font-size="11" fill="#46d369" text-anchor="middle">Episódio 8 • Final</text>
+      <rect x="0" y="122" width="224" height="4" fill="#404040" rx="2"/>
+      <rect x="0" y="122" width="180" height="4" fill="#E50914" rx="2"/>
+    </g>
+
+    <!-- Card 5 -->
+    <g transform="translate(960, 16)">
+      <rect width="224" height="126" rx="5" fill="#831843" stroke="#333" stroke-width="1"/>
+      <rect x="10" y="10" width="40" height="18" rx="3" fill="#01875f"/>
+      <text x="30" y="23" font-family="sans-serif" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">TOP</text>
+      <text x="112" y="65" font-family="sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">GLADIADOR II</text>
+      <text x="112" y="85" font-family="sans-serif" font-size="11" fill="#fde047" text-anchor="middle">Dublado &amp; Legendado</text>
+      <rect x="0" y="122" width="224" height="4" fill="#404040" rx="2"/>
+      <rect x="0" y="122" width="70" height="4" fill="#E50914" rx="2"/>
+    </g>
+  </g>
+
+  <!-- Bottom Cineva Tag -->
+  <rect x="0" y="705" width="1280" height="15" fill="#E50914"/>
+</svg>

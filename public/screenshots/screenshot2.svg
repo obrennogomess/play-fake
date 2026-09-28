@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="darkBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111111"/>
+      <stop offset="100%" stop-color="#191919"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#darkBg)"/>
+
+  <!-- Top bar with Cineva logo -->
+  <rect width="1280" height="65" fill="#141414"/>
+  <g transform="translate(48, 12)">
+    <rect width="40" height="40" rx="8" fill="#0c1427"/>
+    <image href="/images/logo.png" x="0" y="0" width="40" height="40" preserveAspectRatio="xMidYMid meet"/>
+    <text x="52" y="28" font-family="'Impact', 'Bebas Neue', sans-serif" font-size="28" font-weight="bold" fill="#E50914" letter-spacing="2">CINEVA</text>
+    <text x="165" y="27" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ffffff">TOP 10 HOJE</text>
+  </g>
+
+  <!-- Categories Pill Bar -->
+  <g transform="translate(48, 80)">
+    <rect x="0" y="0" width="70" height="32" rx="16" fill="#ffffff"/>
+    <text x="35" y="21" font-family="sans-serif" font-size="13" font-weight="bold" fill="#141414" text-anchor="middle">Tudo</text>
+
+    <rect x="80" y="0" width="80" height="32" rx="16" fill="#262626"/>
+    <text x="120" y="21" font-family="sans-serif" font-size="13" font-weight="500" fill="#ffffff" text-anchor="middle">Séries</text>
+
+    <rect x="170" y="0" width="80" height="32" rx="16" fill="#262626"/>
+    <text x="210" y="21" font-family="sans-serif" font-size="13" font-weight="500" fill="#ffffff" text-anchor="middle">Filmes</text>
+
+    <rect x="260" y="0" width="120" height="32" rx="16" fill="#E50914"/>
+    <text x="320" y="21" font-family="sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Canais IPTV</text>
+
+    <rect x="390" y="0" width="90" height="32" rx="16" fill="#262626"/>
+    <text x="435" y="21" font-family="sans-serif" font-size="13" font-weight="500" fill="#ffffff" text-anchor="middle">Infantil</text>
+  </g>
+
+  <!-- Section Title -->
+  <text x="48" y="150" font-family="sans-serif" font-size="22" font-weight="bold" fill="#ffffff">Top 10 em Filmes e Séries no Brasil Hoje</text>
+
+  <!-- Giant Numbers + Posters Row (Netflix Signature Style) -->
+  <g transform="translate(48, 175)">
+    
+    <!-- Item 1 -->
+    <g transform="translate(0, 0)">
+      <!-- Huge Stylized '1' -->
+      <text x="35" y="220" font-family="'Impact', sans-serif" font-size="240" font-weight="900" fill="#141414" stroke="#595959" stroke-width="4" text-anchor="middle">1</text>
+      <!-- Vertical Poster Card -->
+      <g transform="translate(65, 10)">
+        <rect width="155" height="230" rx="6" fill="#1e1b4b" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+        <rect x="8" y="8" width="40" height="16" rx="2" fill="#E50914"/>
+        <text x="28" y="20" font-family="sans-serif" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">TOP 10</text>
+        <circle cx="77" cy="90" r="35" fill="#f59e0b" opacity="0.2"/>
+        <text x="77" y="85" font-family="sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">A CASA DO</text>
+        <text x="77" y="105" font-family="sans-serif" font-size="13" font-weight="bold" fill="#f59e0b" text-anchor="middle">DRAGÃO T2</text>
+        <rect x="10" y="190" width="135" height="24" rx="4" fill="#E50914"/>
+        <text x="77" y="206" font-family="sans-serif" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">Assistir no Cineva</text>
+      </g>
+    </g>
+
+    <!-- Item 2 -->
+    <g transform="translate(240, 0)">
+      <text x="35" y="220" font-family="'Impact', sans-serif" font-size="240" font-weight="900" fill="#141414" stroke="#595959" stroke-width="4" text-anchor="middle">2</text>
+      <g transform="translate(65, 10)">
+        <rect width="155" height="230" rx="6" fill="#311042" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+        <rect x="8" y="8" width="40" height="16" rx="2" fill="#E50914"/>
+        <text x="28" y="20" font-family="sans-serif" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">TOP 10</text>
+        <circle cx="77" cy="90" r="35" fill="#ec4899" opacity="0.2"/>
+        <text x="77" y="85" font-family="sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">DIVERTIDA</text>
+        <text x="77" y="105" font-family="sans-serif" font-size="13" font-weight="bold" fill="#ec4899" text-anchor="middle">MENTE 2</text>
+        <rect x="10" y="190" width="135" height="24" rx="4" fill="#E50914"/>
+        <text x="77" y="206" font-family="sans-serif" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">Assistir no Cineva</text>
+      </g>
+    </g>
+
+    <!-- Item 3 -->
+    <g transform="translate(480, 0)">
+      <text x="35" y="220" font-family="'Impact', sans-serif" font-size="240" font-weight="900" fill="#141414" stroke="#595959" stroke-width="4" text-anchor="middle">3</text>
+      <g transform="translate(65, 10)">
+        <rect width="155" height="230" rx="6" fill="#450a0a" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+        <rect x="8" y="8" width="40" height="16" rx="2" fill="#E50914"/>
+        <text x="28" y="20" font-family="sans-serif" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">TOP 10</text>
+        <circle cx="77" cy="90" r="35" fill="#ef4444" opacity="0.2"/>
+        <text x="77" y="85" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">DEADPOOL &amp;</text>
+        <text x="77" y="105" font-family="sans-serif" font-size="12" font-weight="bold" fill="#f59e0b" text-anchor="middle">WOLVERINE</text>
+        <rect x="10" y="190" width="135" height="24" rx="4" fill="#E50914"/>
+        <text x="77" y="206" font-family="sans-serif" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">Assistir no Cineva</text>
+      </g>
+    </g>
+
+    <!-- Item 4 -->
+    <g transform="translate(720, 0)">
+      <text x="35" y="220" font-family="'Impact', sans-serif" font-size="240" font-weight="900" fill="#141414" stroke="#595959" stroke-width="4" text-anchor="middle">4</text>
+      <g transform="translate(65, 10)">
+        <rect width="155" height="230" rx="6" fill="#022c22" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+        <rect x="8" y="8" width="40" height="16" rx="2" fill="#E50914"/>
+        <text x="28" y="20" font-family="sans-serif" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">TOP 10</text>
+        <text x="77" y="85" font-family="sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">GLADIADOR II</text>
+        <text x="77" y="105" font-family="sans-serif" font-size="11" fill="#10b981" text-anchor="middle">4K Ultra HD</text>
+        <rect x="10" y="190" width="135" height="24" rx="4" fill="#E50914"/>
+        <text x="77" y="206" font-family="sans-serif" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">Assistir no Cineva</text>
+      </g>
+    </g>
+
+    <!-- Item 5 -->
+    <g transform="translate(960, 0)">
+      <text x="35" y="220" font-family="'Impact', sans-serif" font-size="240" font-weight="900" fill="#141414" stroke="#595959" stroke-width="4" text-anchor="middle">5</text>
+      <g transform="translate(65, 10)">
+        <rect width="155" height="230" rx="6" fill="#172554" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+        <rect x="8" y="8" width="40" height="16" rx="2" fill="#E50914"/>
+        <text x="28" y="20" font-family="sans-serif" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">TOP 10</text>
+        <text x="77" y="85" font-family="sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">OPPENHEIMER</text>
+        <text x="77" y="105" font-family="sans-serif" font-size="11" fill="#38bdf8" text-anchor="middle">Vencedor do Oscar</text>
+        <rect x="10" y="190" width="135" height="24" rx="4" fill="#E50914"/>
+        <text x="77" y="206" font-family="sans-serif" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">Assistir no Cineva</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Row 2: Populares no Cineva -->
+  <g transform="translate(48, 480)">
+    <text x="0" y="0" font-family="sans-serif" font-size="19" font-weight="bold" fill="#e5e5e5">Populares no Cineva Streaming</text>
+    
+    <g transform="translate(0, 18)">
+      <!-- 5 mini widescreen cards -->
+      <rect x="0" y="0" width="224" height="125" rx="5" fill="#1f2937"/>
+      <text x="112" y="65" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">AVATAR: O CAMINHO DA ÁGUA</text>
+      <text x="112" y="85" font-family="sans-serif" font-size="11" fill="#38bdf8" text-anchor="middle">Áudio 5.1 • 4K HDR</text>
+
+      <rect x="240" y="0" width="224" height="125" rx="5" fill="#1e1b4b"/>
+      <text x="352" y="65" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">THE LAST OF US • T2</text>
+      <text x="352" y="85" font-family="sans-serif" font-size="11" fill="#f59e0b" text-anchor="middle">HBO Max no Cineva</text>
+
+      <rect x="480" y="0" width="224" height="125" rx="5" fill="#064e3b"/>
+      <text x="592" y="65" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">BRASILEIRÃO 4K AO VIVO</text>
+      <text x="592" y="85" font-family="sans-serif" font-size="11" fill="#46d369" text-anchor="middle">Todos os Jogos da Rodada</text>
+
+      <rect x="720" y="0" width="224" height="125" rx="5" fill="#3b0764"/>
+      <text x="832" y="65" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">WANDINHA • TEMPORADA 2</text>
+      <text x="832" y="85" font-family="sans-serif" font-size="11" fill="#ec4899" text-anchor="middle">Sucesso Mundial</text>
+
+      <rect x="960" y="0" width="224" height="125" rx="5" fill="#451a03"/>
+      <text x="1072" y="65" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">OPERAÇÃO LIONESS</text>
+      <text x="1072" y="85" font-family="sans-serif" font-size="11" fill="#fbbf24" text-anchor="middle">Ação e Espionagem</text>
+    </g>
+  </g>
+</svg>

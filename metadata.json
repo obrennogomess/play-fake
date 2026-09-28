@@ -1,0 +1,6 @@
+{
+  "name": "Cineva - Streaming & IPTV Player",
+  "description": "Aplicativo oficial Cineva para streaming de canais IPTV em alta definição, filmes e séries para TV Box, Smart TV e Android.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
