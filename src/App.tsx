@@ -5,7 +5,6 @@ import { ScreenshotsCarousel } from './components/ScreenshotsCarousel';
 import { AboutSection } from './components/AboutSection';
 import { DataSafetySection } from './components/DataSafetySection';
 import { ReviewsSection } from './components/ReviewsSection';
-import { InstallModal } from './components/InstallModal';
 import { Footer } from './components/Footer';
 import { Toast } from './components/Toast';
 import { INITIAL_REVIEWS } from './data/reviews';
@@ -26,7 +25,6 @@ export default function App() {
 
   const [activeCategory, setActiveCategory] = useState('Apps');
   const [isWishlisted, setIsWishlisted] = useState(false);
-  const [showInstallModal, setShowInstallModal] = useState(false);
   const [downloadState, setDownloadState] = useState<'idle' | 'downloading' | 'completed'>('idle');
   const [downloadProgress, setDownloadProgress] = useState(0);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
@@ -40,57 +38,25 @@ export default function App() {
     }
   }, [reviews]);
 
-  // Handle Install & APK Download
+  // Handle Install & APK Download directly without any popup
   const handleInstallClick = () => {
-    setShowInstallModal(true);
     if (downloadState === 'downloading') return;
 
+    // Switch button to "Carregando"
     setDownloadState('downloading');
-    setDownloadProgress(10);
 
-    const interval = setInterval(() => {
-      setDownloadProgress((prev) => {
-        if (prev >= 90) {
-          clearInterval(interval);
-          setDownloadState('completed');
+    // Trigger physical download of Cineva.apk
+    const link = document.createElement('a');
+    link.href = '/Cineva.apk';
+    link.download = 'Cineva.apk';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
 
-          // Trigger physical download of Cineva.apk
-          const link = document.createElement('a');
-          link.href = '/Cineva.apk';
-          link.download = 'Cineva.apk';
-          document.body.appendChild(link);
-          link.click();
-          document.body.removeChild(link);
-
-          setToastMessage('Download do Cineva.apk iniciado com sucesso!');
-          return 100;
-        }
-        return prev + 20;
-      });
-    }, 350);
-  };
-
-  const handleRestartDownload = () => {
-    setDownloadState('downloading');
-    setDownloadProgress(20);
-    const interval = setInterval(() => {
-      setDownloadProgress((prev) => {
-        if (prev >= 90) {
-          clearInterval(interval);
-          setDownloadState('completed');
-
-          const link = document.createElement('a');
-          link.href = '/Cineva.apk';
-          link.download = 'Cineva.apk';
-          document.body.appendChild(link);
-          link.click();
-          document.body.removeChild(link);
-
-          return 100;
-        }
-        return prev + 25;
-      });
-    }, 300);
+    // Keep on same screen and revert back to "Instalar" after download finishes
+    setTimeout(() => {
+      setDownloadState('idle');
+    }, 4000);
   };
 
   // Handle Share
@@ -222,15 +188,6 @@ export default function App() {
 
       {/* Footer */}
       <Footer />
-
-      {/* Install Guidance Modal */}
-      <InstallModal
-        isOpen={showInstallModal}
-        onClose={() => setShowInstallModal(false)}
-        downloadProgress={downloadProgress}
-        downloadState={downloadState}
-        onRestartDownload={handleRestartDownload}
-      />
 
       {/* Toast Notification */}
       {toastMessage && (

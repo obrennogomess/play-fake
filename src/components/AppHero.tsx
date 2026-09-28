@@ -117,18 +117,11 @@ export const AppHero: React.FC<AppHeroProps> = ({
               {/* Main Green Install Button */}
               <button
                 onClick={onInstall}
-                className="relative overflow-hidden inline-flex items-center justify-center px-8 py-2.5 sm:py-3 rounded-lg sm:rounded-xl text-white font-medium text-sm sm:text-base bg-[#01875f] hover:bg-[#01704e] active:bg-[#005c3f] shadow-xs hover:shadow-md transition-all duration-200 cursor-pointer select-none min-w-[140px]"
+                disabled={downloadState === 'downloading'}
+                className="relative overflow-hidden inline-flex items-center justify-center px-8 py-2.5 sm:py-3 rounded-lg sm:rounded-xl text-white font-medium text-sm sm:text-base bg-[#01875f] hover:bg-[#01704e] active:bg-[#005c3f] shadow-xs hover:shadow-md transition-all duration-200 cursor-pointer select-none min-w-[140px] disabled:cursor-wait"
               >
                 {downloadState === 'downloading' ? (
-                  <div className="flex items-center gap-2">
-                    <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                    <span>Baixando {downloadProgress}%</span>
-                  </div>
-                ) : downloadState === 'completed' ? (
-                  <div className="flex items-center gap-2">
-                    <Check className="w-5 h-5" />
-                    <span>APK Baixado!</span>
-                  </div>
+                  <span>Carregando</span>
                 ) : (
                   <span>Instalar</span>
                 )}

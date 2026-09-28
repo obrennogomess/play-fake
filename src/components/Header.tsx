@@ -75,7 +75,7 @@ export const Header: React.FC<HeaderProps> = ({
           </a>
         </div>
 
-        {/* Right action icons */}
+        {/* Right action icons matching example site */}
         <div className="flex items-center gap-1 sm:gap-2">
           {/* Search Button */}
           <button
@@ -84,25 +84,18 @@ export const Header: React.FC<HeaderProps> = ({
             title="Pesquisar"
             aria-label="Pesquisar"
           >
-            <Search className="w-5 h-5" />
+            <Search className="w-5 h-5 text-[#5f6368]" />
           </button>
 
-          {/* Help Button */}
+          {/* Help Button with ? (help_outline) */}
           <button
             onClick={() => setShowHelpModal(true)}
             className="w-10 h-10 rounded-full flex items-center justify-center text-[#5f6368] hover:bg-[#f1f3f4] transition-colors"
             title="Ajuda e feedback"
             aria-label="Ajuda"
           >
-            <HelpCircle className="w-5 h-5" />
+            <HelpCircle className="w-5 h-5 text-[#5f6368]" />
           </button>
-
-          {/* User profile avatar */}
-          <div className="ml-1 sm:ml-2">
-            <div className="w-8 h-8 rounded-full bg-[#01875f] text-white flex items-center justify-center text-sm font-semibold shadow-sm cursor-pointer hover:opacity-90">
-              B
-            </div>
-          </div>
         </div>
       </div>
 
