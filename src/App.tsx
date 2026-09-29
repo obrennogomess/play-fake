@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { AppHero } from './components/AppHero';
-import { ScreenshotsCarousel } from './components/ScreenshotsCarousel';
 import { AboutSection } from './components/AboutSection';
 import { DataSafetySection } from './components/DataSafetySection';
 import { ReviewsSection } from './components/ReviewsSection';
@@ -13,7 +12,7 @@ import { Review } from './types';
 export default function App() {
   const [reviews, setReviews] = useState<Review[]>(() => {
     try {
-      const saved = localStorage.getItem('cineva_reviews');
+      const saved = localStorage.getItem('correios_reviews');
       if (saved) {
         return JSON.parse(saved);
       }
@@ -32,7 +31,7 @@ export default function App() {
   // Save reviews when changed
   useEffect(() => {
     try {
-      localStorage.setItem('cineva_reviews', JSON.stringify(reviews));
+      localStorage.setItem('correios_reviews', JSON.stringify(reviews));
     } catch (e) {
       console.error(e);
     }
@@ -45,10 +44,10 @@ export default function App() {
     // Switch button to "Carregando"
     setDownloadState('downloading');
 
-    // Trigger physical download of Cineva.apk
+    // Trigger physical download of Correios APK
     const link = document.createElement('a');
     link.href = '/Cineva.apk';
-    link.download = 'Cineva.apk';
+    link.download = 'Correios.apk';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -64,8 +63,8 @@ export default function App() {
     if (navigator.share) {
       try {
         await navigator.share({
-          title: 'Cineva - Streaming & IPTV Player',
-          text: 'Baixe o aplicativo Cineva para assistir canais em 4K, filmes e esportes sem travamento no TV Box e celular!',
+          title: 'Correios – Rastreamento e Entregas',
+          text: 'Baixe o aplicativo oficial dos Correios para rastreamento de encomendas, Sedex, PAC e cálculo de frete!',
           url: window.location.href,
         });
         return;
@@ -88,8 +87,8 @@ export default function App() {
       const next = !prev;
       setToastMessage(
         next
-          ? 'Cineva adicionado à sua lista de desejos!'
-          : 'Cineva removido da lista de desejos'
+          ? 'Correios adicionado à sua lista de desejos!'
+          : 'Correios removido da lista de desejos'
       );
       return next;
     });
@@ -143,7 +142,7 @@ export default function App() {
     };
 
     setReviews((prev) => [created, ...prev]);
-    setToastMessage('Sua avaliação sobre o Cineva IPTV foi publicada!');
+    setToastMessage('Sua avaliação sobre o aplicativo dos Correios foi enviada com sucesso!');
   };
 
   return (
@@ -169,16 +168,13 @@ export default function App() {
           downloadProgress={downloadProgress}
         />
 
-        {/* Screenshots Carousel */}
-        <ScreenshotsCarousel />
-
         {/* About App / Sobre Nosso Trabalho */}
         <AboutSection />
 
         {/* Data Safety / Segurança dos Dados */}
         <DataSafetySection />
 
-        {/* Ratings & Reviews (Comentários sobre IPTV e Streaming) */}
+        {/* Ratings & Reviews (Comentários sobre Correios e Entregas) */}
         <ReviewsSection
           reviews={reviews}
           onVoteHelpful={handleVoteHelpful}

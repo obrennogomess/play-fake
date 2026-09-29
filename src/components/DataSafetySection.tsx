@@ -81,7 +81,7 @@ export const DataSafetySection: React.FC = () => {
               <div className="flex items-center gap-2">
                 <ShieldCheck className="w-5 h-5 text-[#01875f]" />
                 <h3 className="text-base font-bold text-[#202124]">
-                  Políticas de Segurança do Cineva
+                  Políticas de Segurança e Privacidade - Correios
                 </h3>
               </div>
               <button
@@ -94,10 +94,10 @@ export const DataSafetySection: React.FC = () => {
 
             <div className="mt-4 space-y-3 text-xs sm:text-sm text-[#5f6368] leading-relaxed">
               <p>
-                <strong>Criptografia em Trânsito:</strong> Toda a comunicação entre o aplicativo e os servidores de streaming utiliza criptografia HTTPS e TLS 1.3 de ponta a ponta.
+                <strong>Criptografia em Trânsito:</strong> Todos os dados transmitidos pelo aplicativo utilizam conexão criptografada HTTPS com certificação de segurança oficial.
               </p>
               <p>
-                <strong>Privacidade do Usuário:</strong> O player não rastreia localização por GPS, microfone ou contatos. Apenas armazena preferências locais de favoritos e resolução de vídeo no próprio dispositivo.
+                <strong>Privacidade dos Dados:</strong> Os códigos de rastreamento e apelidos cadastrados são utilizados exclusivamente para consulta do status postal e envio de notificações de entrega.
               </p>
               <p>
                 <strong>Exclusão de Cadastro:</strong> Se você possui um cadastro ou conta de ativação, pode solicitar a remoção imediata dos registros diretamente ao suporte do aplicativo.

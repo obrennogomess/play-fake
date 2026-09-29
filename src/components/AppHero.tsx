@@ -31,11 +31,11 @@ export const AppHero: React.FC<AppHeroProps> = ({
           <div className="flex-1">
             <div className="flex items-start gap-4 sm:gap-6">
               {/* App Icon */}
-              <div className="relative shrink-0 w-20 h-20 sm:w-28 sm:h-28 rounded-2xl sm:rounded-3xl overflow-hidden shadow-md border border-[#0000000d] bg-[#0c1427]">
+              <div className="relative shrink-0 w-20 h-20 sm:w-28 sm:h-28 rounded-2xl sm:rounded-3xl overflow-hidden shadow-md border border-[#0000000d] bg-white flex items-center justify-center p-2">
                 <img
-                  src="/images/logo.png"
-                  alt="Ícone do Cineva IPTV"
-                  className="w-full h-full object-cover"
+                  src="/images/correios-logo.png"
+                  alt="Ícone do Correios"
+                  className="w-full h-full object-contain"
                 />
               </div>
 
@@ -60,7 +60,7 @@ export const AppHero: React.FC<AppHeroProps> = ({
                   onClick={() => setShowDeviceModal(true)}
                   className="mt-2 text-xs sm:text-sm text-[#5f6368] hover:text-[#202124] flex items-center gap-1.5 transition-colors text-left"
                 >
-                  <Tv className="w-3.5 h-3.5 text-[#01875f] shrink-0" />
+                  <Smartphone className="w-3.5 h-3.5 text-[#01875f] shrink-0" />
                   <span>{APP_DETAILS.subtitle}</span>
                 </button>
               </div>
@@ -72,7 +72,7 @@ export const AppHero: React.FC<AppHeroProps> = ({
               <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
                 <div className="flex items-center gap-1">
                   <span className="text-sm sm:text-base font-bold text-[#202124]">
-                    5,0
+                    4,8
                   </span>
                   <Star className="w-3.5 h-3.5 fill-[#202124] text-[#202124]" />
                 </div>
@@ -101,13 +101,13 @@ export const AppHero: React.FC<AppHeroProps> = ({
                   onClick={() => setShowAgeModal(true)}
                   className="flex items-center gap-1 hover:opacity-80 transition-opacity"
                 >
-                  <span className="inline-flex items-center justify-center w-5 h-5 rounded-xs bg-[#000000] text-white text-[11px] font-bold">
-                    18
+                  <span className="inline-flex items-center justify-center w-5 h-5 rounded-xs bg-[#00875f] text-white text-[11px] font-bold">
+                    L
                   </span>
                   <Info className="w-3.5 h-3.5 text-[#5f6368]" />
                 </button>
                 <span className="text-xs text-[#5f6368] mt-0.5 max-w-[120px] sm:max-w-none truncate">
-                  Maiores de 18 anos
+                  {APP_DETAILS.contentRating}
                 </span>
               </div>
             </div>
@@ -171,7 +171,7 @@ export const AppHero: React.FC<AppHeroProps> = ({
               Dispositivos Compatíveis
             </h3>
             <p className="text-xs text-[#5f6368] mt-1">
-              O Cineva IPTV foi desenvolvido e testado para máxima performance nos seguintes aparelhos:
+              O aplicativo dos Correios é compatível com os seguintes dispositivos:
             </p>
 
             <div className="mt-4 space-y-3">
@@ -237,17 +237,17 @@ export const AppHero: React.FC<AppHeroProps> = ({
         <div className="fixed inset-0 z-50 bg-black/40 flex items-center justify-center p-4 backdrop-blur-xs">
           <div className="bg-white rounded-2xl shadow-2xl max-w-sm w-full p-6 border border-[#e0e0e0]">
             <div className="flex items-center gap-3">
-              <span className="w-8 h-8 rounded-md bg-black text-white text-base font-bold flex items-center justify-center">
-                18
+              <span className="w-8 h-8 rounded-md bg-[#00875f] text-white text-base font-bold flex items-center justify-center">
+                L
               </span>
               <div>
-                <h3 className="text-base font-bold text-[#202124]">Classificação 18+</h3>
+                <h3 className="text-base font-bold text-[#202124]">Classificação Livre</h3>
                 <p className="text-xs text-[#5f6368]">ClassInd - Ministério da Justiça</p>
               </div>
             </div>
             <div className="mt-4 text-xs text-[#5f6368] space-y-2">
-              <p>O aplicativo oferece acesso a canais abertos, fechados, filmes, séries e eventos ao vivo com conteúdos variados.</p>
-              <p>Possui <strong>Controle Parental com senha PIN</strong> para bloquear canais e conteúdos adultos para crianças.</p>
+              <p>Este aplicativo é adequado para todas as idades (Classificação Livre).</p>
+              <p>Permite rastrear encomendas, calcular fretes, consultar agências e gerenciar entregas dos Correios com total praticidade e segurança.</p>
             </div>
             <div className="mt-5 flex justify-end">
               <button
