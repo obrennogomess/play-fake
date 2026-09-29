@@ -107,6 +107,6 @@ export const APP_DETAILS = {
   contentRatingAge: '18+',
   version: '4.8.2-tv',
   updatedAt: '18 de setembro de 2026',
-  apkSize: '14,7 MB',
+  apkSize: '14,3 MB',
   apkFilename: 'Cineva.apk',
 };
