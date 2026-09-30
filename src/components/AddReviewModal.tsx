@@ -43,7 +43,7 @@ export const AddReviewModal: React.FC<AddReviewModalProps> = ({
         {/* Header */}
         <div className="flex items-center justify-between pb-3 border-b border-[#f1f3f4]">
           <h3 className="text-lg font-bold text-[#202124]">
-            Avaliar aplicativo dos Correios
+            Avaliar Cineva IPTV
           </h3>
           <button
             onClick={onClose}
@@ -57,7 +57,7 @@ export const AddReviewModal: React.FC<AddReviewModalProps> = ({
           {/* Star selector */}
           <div>
             <label className="block text-xs font-semibold text-[#5f6368] mb-1.5">
-              Sua nota para o aplicativo:
+              Sua nota para o aplicativo de IPTV:
             </label>
             <div className="flex items-center gap-2">
               {[1, 2, 3, 4, 5].map((star) => {
@@ -106,28 +106,30 @@ export const AddReviewModal: React.FC<AddReviewModalProps> = ({
           {/* Device */}
           <div>
             <label className="block text-xs font-semibold text-[#5f6368] mb-1">
-              Qual dispositivo você utiliza?
+              Onde você assiste o Cineva?
             </label>
             <select
               value={device}
               onChange={(e) => setDevice(e.target.value as any)}
               className="w-full px-3.5 py-2.5 rounded-xl border border-[#dadce0] text-sm text-[#202124] focus:outline-none focus:ring-2 focus:ring-[#01875f] bg-white"
             >
+              <option value="TV Box">TV Box Android</option>
+              <option value="Smart TV">Smart TV</option>
+              <option value="Fire Stick">Amazon Fire TV Stick</option>
               <option value="Telefone">Celular Android</option>
               <option value="Tablet">Tablet Android</option>
-              <option value="Smart TV">Outro Dispositivo Android</option>
             </select>
           </div>
 
           {/* Review text */}
           <div>
             <label className="block text-xs font-semibold text-[#5f6368] mb-1">
-              Seu comentário sobre o rastreamento, notificações e entregas:
+              Seu comentário sobre os canais, estabilidade e streaming IPTV:
             </label>
             <textarea
               required
               rows={4}
-              placeholder="Conte como tem sido sua experiência acompanhando suas encomendas pelo aplicativo..."
+              placeholder="Conte como foi sua experiência com os canais ao vivo, filmes, séries, qualidade 4K e atendimento..."
               value={content}
               onChange={(e) => setContent(e.target.value)}
               className="w-full px-3.5 py-2.5 rounded-xl border border-[#dadce0] text-sm text-[#202124] focus:outline-none focus:ring-2 focus:ring-[#01875f] focus:border-transparent resize-none"

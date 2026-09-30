@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
-import { ArrowRight, ChevronDown, ChevronUp, Shield, Sparkles, Package, Truck, Clock, MapPin } from 'lucide-react';
+import { ArrowRight, ChevronDown, ChevronUp, Shield, Sparkles, Tv, Zap, Film, Radio } from 'lucide-react';
 import { APP_DETAILS } from '../data/reviews';
 
 export const AboutSection: React.FC = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const tags = [
-    { label: 'Rastreamento de Objetos', primary: true },
-    { label: 'Entregas & Sedex', primary: true },
-    { label: 'PAC & Logística', primary: true },
-    { label: 'Produtividade', primary: false },
-    { label: 'Cálculo de Frete', primary: false },
-    { label: 'Minhas Importações', primary: false },
-    { label: 'Agências Correios', primary: false },
-    { label: 'Notificações de Entrega', primary: false },
+    { label: 'IPTV Streaming', primary: true },
+    { label: 'Canais Ao Vivo', primary: true },
+    { label: 'Filmes & Séries', primary: true },
+    { label: 'Esportes 4K', primary: false },
+    { label: 'Estilizado', primary: false },
+    { label: 'Casual', primary: false },
+    { label: 'ativação e qualificação', primary: false },
+    { label: 'Off-line', primary: false },
   ];
 
   return (
@@ -40,7 +40,7 @@ export const AboutSection: React.FC = () => {
             {APP_DETAILS.subtitle}
           </p>
           <p className="mt-1">
-            O aplicativo oficial dos <strong>Correios</strong> foi desenvolvido para facilitar o acompanhamento e envio de suas encomendas e correspondências. Rastreie seus pacotes em tempo real, receba notificações a cada movimentação e tenha total controle das suas compras e entregas na palma da mão.
+            <strong>Cineva IPTV</strong> é o reprodutor de mídia e streaming mais completo e veloz para TV Box, Smart TV Android e Firestick. Assista a canais de TV aberta e fechada em Ultra HD 4K, filmes que acabaram de sair do cinema, séries completas e todos os jogos de futebol ao vivo com zero atraso e sem travamentos.
           </p>
 
           {/* Expandable detailed content */}
@@ -49,38 +49,38 @@ export const AboutSection: React.FC = () => {
               <div>
                 <h3 className="text-sm font-bold text-[#202124] mb-2 flex items-center gap-2">
                   <Sparkles className="w-4 h-4 text-[#01875f]" />
-                  Recursos do Aplicativo Correios:
+                  Recursos Exclusivos do Cineva:
                 </h3>
                 <ul className="list-disc list-inside space-y-1 text-xs text-[#5f6368]">
-                  <li><strong>Rastreamento Inteligente:</strong> Acompanhe todas as suas encomendas nacionais e internacionais com histórico completo.</li>
-                  <li><strong>Notificações em Tempo Real:</strong> Seja avisado assim que o carteiro sair para a entrega e quando a encomenda for entregue.</li>
-                  <li><strong>Cálculo de Preços e Prazos:</strong> Simule o valor e o prazo de entrega para Sedex, Sedex 10, Sedex 12 e PAC.</li>
-                  <li><strong>Minhas Importações:</strong> Acompanhe compras internacionais, declare dados fiscais e realize pagamentos de tributos com facilidade.</li>
-                  <li><strong>Busca de Agências:</strong> Localize as agências e pontos de atendimento dos Correios mais próximos de você.</li>
-                  <li><strong>Organização com Apelidos:</strong> Personalize o nome de cada código de rastreamento para saber exatamente qual produto está chegando.</li>
+                  <li><strong>Aceleração de Hardware Nativa:</strong> Decodificação gráfica direta pela GPU para economizar a memória RAM da TV Box.</li>
+                  <li><strong>Buffer Inteligente Anti-Congelamento:</strong> Mantém o fluxo contínuo de vídeo mesmo com variações na velocidade de internet.</li>
+                  <li><strong>Guia EPG Completo:</strong> Veja a programação com horários atualizados e sinopse em tempo real.</li>
+                  <li><strong>Suporte a Áudio Multicanal 5.1 &amp; Legendas:</strong> Alterne dublagem e legendas com facilidade.</li>
+                  <li><strong>Controle Parental com Código PIN:</strong> Proteja canais e conteúdos adultos para navegação segura das crianças.</li>
+                  <li><strong>Organização por Categorias &amp; Favoritos:</strong> Marque seus canais prediletos e acesse em um clique pelo controle.</li>
                 </ul>
               </div>
 
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
                 <div className="p-3 rounded-xl bg-[#f8f9fa] border border-[#e0e0e0]">
-                  <Package className="w-5 h-5 text-[#01875f] mb-1" />
-                  <div className="text-xs font-bold text-[#202124]">Rastreamento</div>
-                  <div className="text-[11px] text-[#5f6368]">Nacional &amp; Internacional</div>
+                  <Tv className="w-5 h-5 text-[#01875f] mb-1" />
+                  <div className="text-xs font-bold text-[#202124]">Smart TV &amp; Box</div>
+                  <div className="text-[11px] text-[#5f6368]">Navegação por controle</div>
                 </div>
                 <div className="p-3 rounded-xl bg-[#f8f9fa] border border-[#e0e0e0]">
-                  <Truck className="w-5 h-5 text-[#01875f] mb-1" />
-                  <div className="text-xs font-bold text-[#202124]">Sedex &amp; PAC</div>
-                  <div className="text-[11px] text-[#5f6368]">Entregas rápidas</div>
+                  <Film className="w-5 h-5 text-[#01875f] mb-1" />
+                  <div className="text-xs font-bold text-[#202124]">Cinema 4K VOD</div>
+                  <div className="text-[11px] text-[#5f6368]">Filmes e séries diários</div>
                 </div>
                 <div className="p-3 rounded-xl bg-[#f8f9fa] border border-[#e0e0e0]">
-                  <Clock className="w-5 h-5 text-[#01875f] mb-1" />
-                  <div className="text-xs font-bold text-[#202124]">Tempo Real</div>
-                  <div className="text-[11px] text-[#5f6368]">Alertas instantâneos</div>
+                  <Radio className="w-5 h-5 text-[#01875f] mb-1" />
+                  <div className="text-xs font-bold text-[#202124]">Futebol Ao Vivo</div>
+                  <div className="text-[11px] text-[#5f6368]">60 FPS sem atraso</div>
                 </div>
                 <div className="p-3 rounded-xl bg-[#f8f9fa] border border-[#e0e0e0]">
-                  <MapPin className="w-5 h-5 text-[#01875f] mb-1" />
-                  <div className="text-xs font-bold text-[#202124]">Agências</div>
-                  <div className="text-[11px] text-[#5f6368]">Localize perto de você</div>
+                  <Zap className="w-5 h-5 text-[#01875f] mb-1" />
+                  <div className="text-xs font-bold text-[#202124]">Troca Rápida</div>
+                  <div className="text-[11px] text-[#5f6368]">Troca em 1 segundo</div>
                 </div>
               </div>
 
@@ -99,7 +99,7 @@ export const AboutSection: React.FC = () => {
           onClick={() => setIsExpanded(!isExpanded)}
           className="mt-3 text-xs sm:text-sm font-semibold text-[#01875f] hover:underline flex items-center gap-1 cursor-pointer"
         >
-          <span>{isExpanded ? 'Mostrar menos' : 'Ler mais sobre o app'}</span>
+          <span>{isExpanded ? 'Mostrar menos' : 'Ler mais sobre o Cineva'}</span>
           {isExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
         </button>
 

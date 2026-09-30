@@ -11,7 +11,7 @@ export interface Review {
   userVoted?: 'yes' | 'no' | null;
 }
 
-export type DeviceFilter = 'Todos' | 'Telefone' | 'Tablet' | 'TV Box' | 'Fire Stick';
+export type DeviceFilter = 'Todos' | 'Telefone' | 'Tablet' | 'TV Box' | 'Smart TV' | 'Fire Stick';
 
 export interface AppDetails {
   name: string;

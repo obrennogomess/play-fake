@@ -31,12 +31,12 @@ export const Footer: React.FC = () => {
 
           {/* Column 3 */}
           <div>
-            <h4 className="font-bold text-[#202124] text-sm mb-3">Serviços Correios</h4>
+            <h4 className="font-bold text-[#202124] text-sm mb-3">Cineva Streaming</h4>
             <ul className="space-y-2.5">
-              <li><a href="#rastreamento" className="hover:text-[#202124] transition-colors">Rastreamento de Objetos</a></li>
-              <li><a href="#sedex" className="hover:text-[#202124] transition-colors">Sedex &amp; PAC</a></li>
-              <li><a href="#precos" className="hover:text-[#202124] transition-colors">Preços e Prazos</a></li>
-              <li><a href="#agencias" className="hover:text-[#202124] transition-colors">Busca de CEP e Agências</a></li>
+              <li><a href="#tvbox" className="hover:text-[#202124] transition-colors">Guia de Instalação TV Box</a></li>
+              <li><a href="#firestick" className="hover:text-[#202124] transition-colors">Tutorial Fire TV Stick</a></li>
+              <li><a href="#suporte" className="hover:text-[#202124] transition-colors">Suporte e Ativação IPTV</a></li>
+              <li><a href="#lista" className="hover:text-[#202124] transition-colors">Grade de Programação (EPG)</a></li>
             </ul>
           </div>
 

@@ -9,26 +9,26 @@ export const ScreenshotsCarousel: React.FC = () => {
     {
       id: 1,
       src: '/screenshots/screenshot1.svg',
-      title: 'Rastreamento de Encomendas em Tempo Real',
-      subtitle: 'Acompanhe todas as suas entregas nacionais e internacionais dos Correios',
+      title: 'Catálogo Cineva no Estilo Netflix – Destaques & Continuar Assistindo',
+      subtitle: 'Interface dark premium com filmes em 4K, séries exclusivas e canais IPTV ao vivo',
     },
     {
       id: 2,
       src: '/screenshots/screenshot2.svg',
-      title: 'Notificações e Avisos de Entrega',
-      subtitle: 'Saiba o momento exato em que o carteiro saiu para entrega ao destinatário',
+      title: 'Top 10 no Brasil Hoje no Cineva – Os Mais Assistidos',
+      subtitle: 'Classificação dos filmes e séries mais populares com números gigantes estilo Netflix',
     },
     {
       id: 3,
       src: '/screenshots/screenshot3.svg',
-      title: 'Simulador de Preços e Prazos Sedex & PAC',
-      subtitle: 'Calcule fretes e descubra o prazo estimado com precisão',
+      title: 'Canais Ao Vivo IPTV Integrados no Catálogo',
+      subtitle: 'Futebol em 4K 60FPS sem delay, Premiere, ESPN, SporTV, CazéTV e canais 24h',
     },
     {
       id: 4,
       src: '/screenshots/screenshot4.svg',
-      title: 'Minhas Importações e Gestão de Pacotes',
-      subtitle: 'Organize suas encomendas com apelidos personalizados e histórico completo',
+      title: 'Ficha Técnica e Detalhes do Filme com Player 4K Cineva',
+      subtitle: 'Sinopse completa, áudio multicanal 5.1, elenco e títulos semelhantes no Cineva',
     },
   ];
 
