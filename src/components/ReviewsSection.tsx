@@ -81,42 +81,6 @@ export const ReviewsSection: React.FC<ReviewsSectionProps> = ({
           </button>
 
           <button
-            onClick={() => setSelectedDevice('TV Box')}
-            className={`px-3 py-1.5 rounded-full text-xs font-medium border flex items-center gap-1.5 transition-colors whitespace-nowrap cursor-pointer ${
-              selectedDevice === 'TV Box'
-                ? 'bg-[#e6f4ea] text-[#01875f] border-[#01875f] font-semibold'
-                : 'bg-white text-[#5f6368] border-[#dadce0] hover:bg-[#f1f3f4]'
-            }`}
-          >
-            <Tv className="w-3.5 h-3.5" />
-            <span>TV Box</span>
-          </button>
-
-          <button
-            onClick={() => setSelectedDevice('Smart TV')}
-            className={`px-3 py-1.5 rounded-full text-xs font-medium border flex items-center gap-1.5 transition-colors whitespace-nowrap cursor-pointer ${
-              selectedDevice === 'Smart TV'
-                ? 'bg-[#e6f4ea] text-[#01875f] border-[#01875f] font-semibold'
-                : 'bg-white text-[#5f6368] border-[#dadce0] hover:bg-[#f1f3f4]'
-            }`}
-          >
-            <Tv className="w-3.5 h-3.5" />
-            <span>Smart TV</span>
-          </button>
-
-          <button
-            onClick={() => setSelectedDevice('Fire Stick')}
-            className={`px-3 py-1.5 rounded-full text-xs font-medium border flex items-center gap-1.5 transition-colors whitespace-nowrap cursor-pointer ${
-              selectedDevice === 'Fire Stick'
-                ? 'bg-[#e6f4ea] text-[#01875f] border-[#01875f] font-semibold'
-                : 'bg-white text-[#5f6368] border-[#dadce0] hover:bg-[#f1f3f4]'
-            }`}
-          >
-            <Tv className="w-3.5 h-3.5" />
-            <span>Fire Stick</span>
-          </button>
-
-          <button
             onClick={() => setSelectedDevice('Telefone')}
             className={`px-3 py-1.5 rounded-full text-xs font-medium border flex items-center gap-1.5 transition-colors whitespace-nowrap cursor-pointer ${
               selectedDevice === 'Telefone'
@@ -146,7 +110,7 @@ export const ReviewsSection: React.FC<ReviewsSectionProps> = ({
           {/* Big Rating Score */}
           <div className="flex flex-col items-center sm:items-start shrink-0 text-center sm:text-left">
             <span className="text-5xl sm:text-6xl font-extrabold text-[#202124] tracking-tight">
-              5,0
+              4,8
             </span>
             <div className="flex items-center gap-1 mt-1">
               {[1, 2, 3, 4, 5].map((s) => (
@@ -154,7 +118,7 @@ export const ReviewsSection: React.FC<ReviewsSectionProps> = ({
               ))}
             </div>
             <span className="text-xs text-[#5f6368] mt-1">
-              404.281 avaliações no Brasil
+              1.240.892 avaliações no Brasil
             </span>
           </div>
 
@@ -164,21 +128,21 @@ export const ReviewsSection: React.FC<ReviewsSectionProps> = ({
             <div className="flex items-center gap-3 text-xs text-[#5f6368]">
               <span className="w-3 text-right font-medium">5</span>
               <div className="flex-1 h-3 bg-[#e0e0e0] rounded-full overflow-hidden">
-                <div className="h-full bg-[#01875f] rounded-full w-[96%]" />
+                <div className="h-full bg-[#01875f] rounded-full w-[92%]" />
               </div>
             </div>
             {/* 4 stars */}
             <div className="flex items-center gap-3 text-xs text-[#5f6368]">
               <span className="w-3 text-right font-medium">4</span>
               <div className="flex-1 h-3 bg-[#e0e0e0] rounded-full overflow-hidden">
-                <div className="h-full bg-[#01875f] rounded-full w-[3%]" />
+                <div className="h-full bg-[#01875f] rounded-full w-[6%]" />
               </div>
             </div>
             {/* 3 stars */}
             <div className="flex items-center gap-3 text-xs text-[#5f6368]">
               <span className="w-3 text-right font-medium">3</span>
               <div className="flex-1 h-3 bg-[#e0e0e0] rounded-full overflow-hidden">
-                <div className="h-full bg-[#01875f] rounded-full w-[1%]" />
+                <div className="h-full bg-[#01875f] rounded-full w-[2%]" />
               </div>
             </div>
             {/* 2 stars */}
@@ -201,7 +165,7 @@ export const ReviewsSection: React.FC<ReviewsSectionProps> = ({
         {/* Sort selector */}
         <div className="mt-6 flex items-center justify-between">
           <span className="text-xs text-[#5f6368]">
-            Mostrando <strong>{displayReviews.length}</strong> de {filteredReviews.length} comentários sobre o streaming IPTV
+            Mostrando <strong>{displayReviews.length}</strong> de {filteredReviews.length} avaliações sobre entregas e rastreamento
           </span>
 
           <div className="flex items-center gap-2 text-xs">
@@ -228,21 +192,13 @@ export const ReviewsSection: React.FC<ReviewsSectionProps> = ({
               {/* Review Header */}
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  {/* Avatar */}
-                  {rev.avatarUrl ? (
-                    <img
-                      src={rev.avatarUrl}
-                      alt={rev.author}
-                      className="w-9 h-9 rounded-full object-cover shrink-0"
-                    />
-                  ) : (
-                    <div
-                      className="w-9 h-9 rounded-full flex items-center justify-center text-white text-sm font-bold shadow-xs shrink-0"
-                      style={{ backgroundColor: rev.avatarColor || '#01875f' }}
-                    >
-                      {rev.author.charAt(0).toUpperCase()}
-                    </div>
-                  )}
+                  {/* Avatar with Author Initial */}
+                  <div
+                    className="w-9 h-9 rounded-full flex items-center justify-center text-white text-sm font-bold shadow-xs shrink-0"
+                    style={{ backgroundColor: rev.avatarColor || '#01875f' }}
+                  >
+                    {rev.author.charAt(0).toUpperCase()}
+                  </div>
 
                   <div>
                     <h4 className="text-sm font-semibold text-[#202124]">
@@ -324,7 +280,7 @@ export const ReviewsSection: React.FC<ReviewsSectionProps> = ({
               onClick={() => setVisibleCount((prev) => prev + 5)}
               className="px-6 py-2.5 rounded-xl border border-[#dadce0] text-xs sm:text-sm font-semibold text-[#01875f] hover:bg-[#f1f3f4] transition-colors cursor-pointer"
             >
-              Ver todas as avaliações de IPTV ({sortedReviews.length})
+              Ver todas as avaliações dos Correios ({sortedReviews.length})
             </button>
           </div>
         )}
@@ -338,7 +294,7 @@ export const ReviewsSection: React.FC<ReviewsSectionProps> = ({
               Avaliações Verificadas
             </h3>
             <p className="mt-2 text-xs sm:text-sm text-[#5f6368] leading-relaxed">
-              As notas e avaliações são fornecidas por usuários reais que baixaram e ativaram o aplicativo Cineva em seus dispositivos Android, TV Box ou Smart TV. Avaliações com termos ofensivos ou spam são filtradas automaticamente.
+              As notas e avaliações são fornecidas por usuários reais que utilizam o aplicativo dos Correios para rastreamento de encomendas e serviços postais em dispositivos Android. Avaliações com termos ofensivos ou spam são filtradas automaticamente.
             </p>
             <div className="mt-5 flex justify-end">
               <button

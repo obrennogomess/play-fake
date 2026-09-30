@@ -26,4 +26,6 @@ export interface AppDetails {
   version: string;
   updatedAt: string;
   apkSize: string;
+  apkFilename?: string;
+  downloadUrl?: string;
 }

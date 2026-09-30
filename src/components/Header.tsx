@@ -146,7 +146,7 @@ export const Header: React.FC<HeaderProps> = ({
                 autoFocus
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                placeholder="Pesquisar apps, IPTV, canais ou jogos..."
+                placeholder="Pesquisar apps, rastreamento, entregas ou serviços..."
                 className="w-full px-4 py-3 bg-[#f1f3f4] rounded-xl text-[#202124] focus:outline-none focus:ring-2 focus:ring-[#01875f] text-sm"
               />
               <div className="mt-4 flex justify-end gap-2">
@@ -175,7 +175,7 @@ export const Header: React.FC<HeaderProps> = ({
           <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 border border-[#e0e0e0]">
             <div className="flex items-center justify-between pb-3 border-b border-[#f1f3f4]">
               <h3 className="text-lg font-semibold text-[#202124]">
-                Ajuda com Cineva IPTV
+                Ajuda com aplicativo Correios
               </h3>
               <button
                 onClick={() => setShowHelpModal(false)}
@@ -186,19 +186,19 @@ export const Header: React.FC<HeaderProps> = ({
             </div>
             <div className="mt-4 space-y-3 text-sm text-[#5f6368] leading-relaxed">
               <p>
-                <strong>Como instalar no TV Box ou Smart TV?</strong>
+                <strong>Como instalar no seu celular ou tablet?</strong>
                 <br />
-                Clique no botão verde <strong>Instalar</strong> para baixar o aplicativo <code className="bg-[#f1f3f4] px-1.5 py-0.5 rounded text-[#202124]">Cineva.apk</code> diretamente para seu aparelho.
+                Clique no botão verde <strong>Instalar</strong> para baixar e atualizar o aplicativo dos Correios no seu dispositivo Android.
               </p>
               <p>
-                <strong>Requisitos mínimos:</strong>
+                <strong>Requisitos do sistema:</strong>
                 <br />
-                Android 5.0 ou superior, conexão de internet recomendada de pelo menos 15 Mbps para conteúdos em HD e 35 Mbps para 4K.
+                Android 7.0 ou superior e conexão com a internet ativa (Wi-Fi ou dados móveis) para receber as notificações de rastreamento.
               </p>
               <p>
-                <strong>Compatibilidade:</strong>
+                <strong>Serviços disponíveis:</strong>
                 <br />
-                TV Box Android, Smart TVs Android (TCL, Philips, Philco), Amazon Fire TV Stick, Xiaomi Mi Box / Stick, smartphones e tablets Android.
+                Rastreamento nacional e internacional (Sedex, PAC), cálculo de frete, busca de agências e Minhas Importações.
               </p>
             </div>
             <div className="mt-6 flex justify-end">
